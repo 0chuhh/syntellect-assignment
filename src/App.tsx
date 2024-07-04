@@ -10,8 +10,10 @@ const store = new RootStore();
 function App() {
   return (
     <RootStoreContext.Provider value={store}>
-      <FirstControl />
-      <SecondControll />
+      <div style={{maxWidth:'70%', margin:'0 auto'}}>
+        <FirstControl />
+        <SecondControll />
+      </div>
     </RootStoreContext.Provider>
   );
 }
