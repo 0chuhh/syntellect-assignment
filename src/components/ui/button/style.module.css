@@ -1,0 +1,15 @@
+.button {
+    width: max-content;
+    background-color: var(--primary-color);
+    color:#fff;
+    padding: var(--padding); 
+    box-sizing: border-box;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
