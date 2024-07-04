@@ -10,7 +10,7 @@ export interface IInputProps extends React.DetailedHTMLProps<React.InputHTMLAttr
 
 export const Input = React.memo(forwardRef<HTMLInputElement, IInputProps>(({
     label = '',
-    fullWidth = true,
+    fullWidth = false,
     startAdornment,
     endAdornment,
     className,
