@@ -4,34 +4,36 @@ import { useRef } from 'react';
 
 export const FirstControl = () => {
 
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef1 = useRef<HTMLInputElement>(null);
+    const inputRef2 = useRef<HTMLInputElement>(null);
 
     const handleClear = () => {
-        if (!inputRef.current) return;
-        inputRef.current.value = "";
+        if (!inputRef2.current) return;
+        inputRef2.current.value = "";
     };
 
     const handleHelloWorld = () => {
-        if (!inputRef.current) return;
-        inputRef.current.value = "Hello, world!";
+        if (!inputRef2.current) return;
+        inputRef2.current.value = "Hello, world!";
     };
 
     const handleAlertTextInInput = () => {
-        if (!inputRef.current) return;
-        window.alert(inputRef.current.value);
+        if (!inputRef1.current) return;
+        window.alert(inputRef1.current.value);
     };
 
     const handleAlertIsNumber = () => {
-        if (!inputRef.current) return;
-        const isNumber = !Number.isNaN(Number(inputRef.current.value));
-        window.alert(isNumber ? 'it is a number' : 'not a number');
+        if (!inputRef1.current) return;
+        const isNumber = !Number.isNaN(Number(inputRef1.current.value));
+        window.alert((inputRef1.current.value !== '' && isNumber) ? 'it is a number' : 'not a number');
     };
 
     return (
         <div>
             <h1>FIRST</h1>
             <Input
-                ref={inputRef}
+                fullWidth
+                ref={inputRef2}
                 label='first'
                 placeholder='placeholder'
                 endAdornment={
@@ -43,14 +45,15 @@ export const FirstControl = () => {
             />
             <hr />
             <Input
-                ref={inputRef}
+                fullWidth
+                ref={inputRef1}
                 label='second'
                 placeholder='placeholder'
                 startAdornment={
                     <Button onClick={handleAlertIsNumber} style={{ background: 'rgb(151, 173, 72)' }}>IS NUMBER ALERT</Button>
                 }
                 endAdornment={
-                        <Button onClick={handleAlertTextInInput}>ALERT TEXT IN INPUT</Button>
+                    <Button onClick={handleAlertTextInInput}>ALERT TEXT IN INPUT</Button>
                 }
             />
         </div>
