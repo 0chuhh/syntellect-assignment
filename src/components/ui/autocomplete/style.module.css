@@ -1,0 +1,33 @@
+.wrapper {
+    position: relative;
+    width: max-content;
+}
+
+.fullwidth{
+    width: 100%;
+}
+
+.optionList{
+    position: absolute;
+    z-index: 100;
+    min-width: min-content;
+    width: 100%;
+    max-width: 120%;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 1px 1px 6px gray;
+    box-sizing: border-box;
+}
+
+.option, .noOptions, .loading {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.option:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
