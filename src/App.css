@@ -1,0 +1,7 @@
+hr {
+    border:1px dashed;
+    border-color: rgb(165, 165, 165);
+    width: 95%;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
